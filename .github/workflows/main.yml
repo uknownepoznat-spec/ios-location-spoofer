@@ -17,8 +17,12 @@ jobs:
           -sdk iphoneos \
           -configuration Release \
           -derivedDataPath build \
+          -allowProvisioningUpdates \
           CODE_SIGNING_ALLOWED=NO \
           CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGN_ENTITLEMENTS="" \
+          CODE_SIGNING_METHOD=manual \
           clean build
 
       - name: Create IPA
